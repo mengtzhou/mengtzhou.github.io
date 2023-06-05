@@ -49,6 +49,7 @@
           <h1 class="name" title="Mengtian Zhou">Clara Zhou</h1>
 
           <p class="title">M.S. in Data Science at UMich</p> 
+          <p class="title">B.S. in Computer Engineering at SJTU</p>
           
         </div>
 
@@ -142,12 +143,12 @@
             <button class="navbar-link" data-nav-link>About</button>
           </li>
 
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
+          </li> -->
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
+            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
 
@@ -171,21 +172,18 @@
 
         <section class="about-text">
           <p>
-            Hi, I'm Mengtian! 
-            I'm currently a second-year Master student, majoring in Data Science, 
-            at the University of Michgian - Ann Arbor. 
+            Hi, I'm Clara! 
+            I achieved my Master degree in Data Science from University of Michigan in April 2023, and plan to continue to keep learning and grow as an engineer.
+            I'm actively looking for full-time software development engineer/data engineer opportunities.
+            
           </p>
 
           <p>
-            My primary programming language is C++. I have experience in Python, 
-            programming framework including Flask and Django, 
+            My primary programming language is C++. I have experience in Java and Python, 
+            programming framework including Spring Boot, Flask and Django, 
             and database management system including MySQL, PostgreSQL, Oracle and MongoDB.
           </p>
 
-          <p>
-            I'll graduate in April 2023, and plan to continue to keep learning and grow as a developer.
-            I'm looking for full-time software development engineer/data engineer opportunities.
-          </p>
         </section>
 
 
@@ -193,7 +191,7 @@
           - service
         -->
 
-        <section class="service">
+        <!-- <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -269,79 +267,7 @@
 
           </ul>
 
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/my-avatar.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <!-- <img src="./assets/images/icon-quote.svg" alt="quote icon"> -->
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title></h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        
-
-        
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+        </section> -->
 
         <section class="timeline">
 
@@ -402,6 +328,53 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
+            <h3 class="h3">Skills</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Programming Languages/Frameworks</h4>
+
+              <p class="timeline-text">
+                C++, Java, Python, R, JavaScript, Spring Boot, Django, Flask, Vue.js, Swift, SwiftUI
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Database Management Systems</h4>
+
+              <p class="timeline-text">
+                MySQL, PostgreSQL, Oracle, MongoDB
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Data Analysis & Machine Learning Techniques</h4>
+
+              <p class="timeline-text">
+                Classification, Regression, Clustering, Neural Networks
+              </p>
+
+            </li>
+
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
             <h3 class="h3">Experience</h3>
           </div>
 
@@ -417,11 +390,11 @@
               <span>May 2022 — Sep 2022</span>
 
               <p class="timeline-text">
-                ●  Led the project of predicting cell's proportions in placenta tissue, lung tissue and PBMCs and designed working pipeline.
-              </p>
+                ●  Led the project of predicting cell's proportions in placenta tissue, lung tissue and PBMCs, 
+                improved the prediction accuracy of latest published model by 50% through implementing KNN model 
+                and reducing high dimensionality of gene data from 280,000 to 500 with artificial neural network Auto-Encoder.
               <p class="timeline-text">
-                ● Improved the prediction accuracy of latest published model by 50% through implementing KNN model and reducing high
-                dimensionality of gene data with Auto-Encoders in Python.
+                ● Evaluated models using 3 different measures and visualized model results using various plots to show comparison from difference perspectives.
               </p>
               <p class="timeline-text">
                 ● Developed a R package performing placenta cell composition analysis (poster accepted by 55th SSR Annual Meeting).
@@ -441,12 +414,19 @@
             </div>
 
             <h3 class="h33" data-nav-link>Projects</h3>
-            <p class="timeline-text">
-              [Click "Projects" to see details.]
-            </p>
           </div>
 
           <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" data-nav-link>Personal Website Management Web App</h4>
+
+              <p class="timeline-text">
+               Created a web app for users to manage and edit personal webpage's contents.
+              </p>
+
+            </li>
 
             <li class="timeline-item">
 
@@ -495,54 +475,83 @@
 
         </section>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Skills</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Programming Languages/Frameworks</h4>
-
-              <p class="timeline-text">
-                C/C++, Python, R, JavaScript, Django, Flask, Vue.js, Swift, SwiftUI
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Database Management Systems</h4>
-
-              <p class="timeline-text">
-                MySQL, PostgreSQL, Oracle, MongoDB
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Analysis & ML Techniques</h4>
-
-              <p class="timeline-text">
-                Classification, Regression, Clustering, Neural Networks
-              </p>
-
-            </li>
+        
 
 
-          </ol>
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          
 
         </section>
 
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/my-avatar.png" alt="" width="80" data-modal-img>
+              </figure>
+
+              <!-- <img src="./assets/images/icon-quote.svg" alt="quote icon"> -->
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        
+
+        
+
       </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <!-- <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        
+
+      </article> -->
 
 
 
@@ -552,10 +561,10 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="projects">
+      <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Projects</h2>
+          <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
         <section class="projects">
@@ -626,6 +635,7 @@
           <section class="timeline">
   
             <ol class="project-list-1">
+              
 
               <li class="project-item active" data-filter-item data-category="web & ios app development">
 
@@ -651,6 +661,29 @@
                   GooglePlaces SDK to achieve place search autocomplete and geocoding, GoogleMaps SDK to show place location on the map. Integrated UIKit with SwiftUI using 
                   UIViewRepresentable protocol. Built complicated user flows including log-in, sign-up, place search and review editing using NavigationStack. Enabled views to 
                   observe/modify published data value changes using various SwiftUI property wrappers. Built GET/POST URL request with generics that encodes and decodes JSON to communicate with Backend.
+                </p>
+  
+              </li>
+
+              <li class="project-item active" data-filter-item data-category="web & ios app development">
+
+                <a class="h44 timeline-item-title" ><b>Personal Website Management Web App</b></a>
+  
+                <span>Feb 2023 — Apr 2023</span>
+                <img src="./assets/images/p-pmw.png" alt=""/>
+  
+                <p>
+                  ● Created a web app for users to manage and edit personal webpage's contents.
+                </p>
+                <p>
+                  ● Developed web pages supporting admin login and webpage content editing using JavaScript, created dynamic HTML with
+                  DOM, and enabled communication with backend using Axios.
+                </p>
+                <p>
+                  ● Implemented the backend in Java using Spring Boot framework and enabled service using Tomcat which was secured with
+                  Apache as reverse proxy server.
+                <p>
+                  ●	Designed and managed database storing information on personal webpage contents using MongoDB Atlas.
                 </p>
   
               </li>
