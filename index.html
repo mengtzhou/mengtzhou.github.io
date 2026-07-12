@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengting Zhou — Software Engineer</title>
+  <meta name="description" content="Personal website of Mengting Zhou — software engineer working across data systems, distributed computing, and machine learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="nav__brand">MZ</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#artifacts">Artifacts</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Hi, my name is</p>
+        <h1 class="hero__title">Mengting Zhou.</h1>
+        <h2 class="hero__subtitle">I build high-performance, data-driven systems.</h2>
+        <p class="hero__lede">
+          Software engineer interested in high-performance, low-latency systems
+          and the data infrastructure behind real-time, data-driven
+          decision-making. I like applying computer science, data engineering,
+          and AI to build fast, reliable software.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#artifacts">View my Artifacts</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 class="section__title"><span class="section__num">01.</span> About Me</h2>
+      <div class="about">
+        <div class="about__text">
+          <p>
+            I'm an engineer who likes working close to the data. My background
+            spans building a scalable search engine over Wikipedia, implementing
+            a MapReduce framework from scratch, and designing the database layer
+            for a social-media platform.
+          </p>
+          <p>
+            I care about clean abstractions, measurable performance, and code
+            that other people can actually read. Recently I've been exploring
+            machine-learning models and how to ship them responsibly.
+          </p>
+          <p>Technologies I've been working with lately:</p>
+          <ul class="about__list">
+            <li>Kubernetes</li>
+            <li>Docker</li>
+            <li>Terraform</li>
+            <li>AWS</li>
+            <li>Cursor</li>
+            <li>Claude Code</li>
+          </ul>
+        </div>
+        <div class="about__portrait">
+          <div class="about__portrait-frame">
+            <img src="./assets/avatar.png" alt="Portrait of Mengting Zhou" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artifacts -->
+    <section id="artifacts" class="section">
+      <h2 class="section__title"><span class="section__num">02.</span> Things I've Built</h2>
+      <div class="artifacts">
+        <a class="card" href="artifacts/wanderwise.html">
+          <div class="card__top">
+            <span class="card__folder">❯</span>
+            <span class="card__link" aria-hidden="true">↗</span>
+          </div>
+          <p class="card__eyebrow">Artifact 1</p>
+          <h3 class="card__title">Wanderwise Travel Planner</h3>
+          <p class="card__desc">
+            A custom GPT that finds a city's most popular attractions and turns
+            them into a practical, well-paced, day-by-day itinerary tailored to
+            your interests, time, and travel style.
+          </p>
+          <ul class="card__tags"><li>Custom GPT</li><li>Prompt Design</li></ul>
+        </a>
+
+        <div class="card card--placeholder">
+          <div class="card__top">
+            <span class="card__folder">❯</span>
+          </div>
+          <h3 class="card__title">More Artifacts</h3>
+          <p class="card__desc">
+            More artifacts are on the way — this section will be updated shortly.
+          </p>
+          <ul class="card__tags"><li>Coming soon</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2 class="section__title"><span class="section__num">03.</span> Skills</h2>
+      <div class="skills">
+        <div class="skills__col">
+          <h3>Languages</h3>
+          <ul><li>C/C++</li><li>Java</li><li>SQL</li><li>Python</li></ul>
+        </div>
+        <div class="skills__col">
+          <h3>Systems &amp; Data</h3>
+          <ul><li>Distributed Systems</li><li>Kafka</li><li>Spark</li><li>Redis</li><li>PostgreSQL</li></ul>
+        </div>
+        <div class="skills__col">
+          <h3>Tools &amp; Infra</h3>
+          <ul><li>Kubernetes</li><li>Docker</li><li>Terraform</li><li>AWS</li><li>CI/CD</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--contact">
+      <p class="contact__eyebrow"><span class="section__num">04.</span> What's Next?</p>
+      <h2 class="contact__title">Get In Touch</h2>
+      <p class="contact__lede">
+        I'm always happy to talk about interesting problems, collaborations, or
+        opportunities. Feel free to reach out and I'll get back to you.
+      </p>
+      <a class="btn btn--primary btn--lg" href="mailto:mengtian.zhou@myemail.indwes.com">Say Hello</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Mengting Zhou · <span id="year"></span></p>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

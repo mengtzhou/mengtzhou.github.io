@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderwise Travel Planner — Mengting Zhou</title>
+  <meta name="description" content="Wanderwise, a custom travel-planning GPT that surfaces a city's most popular attractions and builds a practical, well-paced, day-by-day itinerary." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html" class="nav__brand">MZ</a>
+    <nav class="nav__links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#artifacts">Artifacts</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="artifact is-visible">
+      <a class="artifact__back" href="../index.html#artifacts">← Back to artifacts</a>
+      <p class="artifact__eyebrow">Artifact</p>
+      <h1 class="artifact__title">Wanderwise Travel Planner</h1>
+      <ul class="artifact__tags">
+        <li>Custom GPT</li>
+        <li>Prompt Design</li>
+        <li>Conversational AI</li>
+      </ul>
+
+      <div class="artifact__hero-row">
+        <img class="artifact__hero" src="../assets/wanderwise-logo.png" alt="Wanderwise logo — your personal travel planner" />
+        <a class="btn btn--ghost" href="https://chatgpt.com/g/g-6a525b5605f081919c2bee0df78d2028-wanderwise" target="_blank" rel="noopener">Open Wanderwise ↗</a>
+      </div>
+
+      <div class="artifact__body">
+        <p>
+          Wanderwise is a custom travel-planning assistant (a purpose-built GPT).
+          Its specialty is helping travelers discover the most popular points of
+          interest in any city and turning them into a practical, well-paced,
+          day-by-day itinerary tailored to their interests, time, and travel
+          style.
+        </p>
+
+        <h2>Ideas and Insights</h2>
+        <p>
+          The initial idea for Wanderwise came from how I usually plan trips. I
+          realized that the biggest challenge is not finding information but
+          filtering it. Travelers often open many websites, blogs, and videos,
+          yet still struggle to decide what is actually worth visiting — so I
+          wanted to create a chatbot that gathers and filters attraction info
+          for them.
+        </p>
+        <p>
+          On top of that, people naturally describe their travel style with
+          phrases like "relaxed," "not packed," or "I just want to see the
+          highlights." Instead of asking users to configure many settings, the
+          assistant should understand these natural descriptions and adapt the
+          itinerary accordingly.
+        </p>
+
+        <h2>Decisions and Rationales</h2>
+        <ul>
+          <li>Always ask for a destination before planning, since an itinerary can't be created without knowing where the user wants to go.</li>
+          <li>Limit the conversation to two to four questions so it never feels like filling out a survey.</li>
+          <li>Present six to ten genuinely popular attractions before building the itinerary, so users can customize the plan instead of receiving a fixed schedule.</li>
+          <li>Require meal breaks, rest stops, and realistic travel times, because a practical itinerary is more valuable than one that simply crams in as many attractions as possible.</li>
+        </ul>
+
+        <h2>Iterations</h2>
+        <p>
+          Wanderwise evolved through several iterations. My first design
+          generated an itinerary immediately after collecting a few
+          preferences, but users had no chance to choose which attractions
+          interested them most. I revised the flow so Wanderwise first presents
+          a list of the most popular attractions, then asks users to select the
+          ones they want before generating the itinerary.
+        </p>
+        <p>
+          I also improved the presentation by showing an image with each
+          attraction rather than placing all images at the beginning, making the
+          recommendations easier to browse. After testing, I refined the prompts
+          to feel more natural — removing rigid step titles and using a
+          friendlier, more conversational style.
+        </p>
+
+        <h2>Challenges and Solutions</h2>
+        <p>
+          One challenge was balancing personalization with simplicity. Asking
+          too many questions produced better recommendations but made the
+          interaction feel slow, while asking too few led to generic
+          itineraries. I addressed this by collecting only the most important
+          information and inferring reasonable defaults whenever possible.
+        </p>
+        <p>
+          Another challenge was keeping itineraries realistic rather than overly
+          ambitious. I added rules that group nearby attractions, include meal
+          and coffee breaks, and adjust the number of attractions based on the
+          user's preferred pace. Finally, I added guardrails instructing the
+          assistant not to invent attraction details, prices, or opening hours,
+          and instead rely on current information or clearly tell users when to
+          verify those details themselves.
+        </p>
+
+        <h2>Try it</h2>
+        <figure class="artifact__figure">
+          <img src="../assets/wanderwise-screenshot.png" alt="Screenshot of the Wanderwise GPT welcome screen" />
+          <figcaption>Wanderwise in ChatGPT, ready to plan a trip.</figcaption>
+        </figure>
+        <p>
+          Just name a city — and, if you know them, your trip length and interests
+          — and Wanderwise takes it from there.
+        </p>
+
+        <div class="artifact__links">
+          <a class="btn btn--ghost" href="https://chatgpt.com/g/g-6a525b5605f081919c2bee0df78d2028-wanderwise" target="_blank" rel="noopener">Open Wanderwise ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Mengting Zhou · <span id="year"></span></p>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>
