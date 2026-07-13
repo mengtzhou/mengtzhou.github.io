@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wanderwise Travel Planner — Mengtian Zhou</title>
+  <title>Wanderwise Travel Planner | Mengtian Zhou</title>
   <meta name="description" content="Wanderwise, a custom travel-planning GPT that surfaces a city's most popular attractions and builds a practical, well-paced, day-by-day itinerary." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +14,9 @@
   <header class="nav">
     <a href="../index.html" class="nav__brand">MZ</a>
     <nav class="nav__links">
-      <a href="../index.html#about">About</a>
+      <a href="../index.html#bio">Bio</a>
+      <a href="../index.html#value">Value</a>
       <a href="../index.html#artifacts">Artifacts</a>
-      <a href="../index.html#skills">Skills</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
@@ -36,87 +36,100 @@
       </ul>
 
       <div class="artifact__hero-row">
-        <img class="artifact__hero" src="../assets/wanderwise-logo.png" alt="Wanderwise logo — your personal travel planner" />
+        <img class="artifact__hero" src="../assets/wanderwise-logo.png" alt="Wanderwise logo, your personal travel planner" />
         <a class="btn btn--ghost" href="https://chatgpt.com/g/g-6a525b5605f081919c2bee0df78d2028-wanderwise" target="_blank" rel="noopener">Open Wanderwise ↗</a>
       </div>
 
       <div class="artifact__body">
+        <h2>Introduction</h2>
         <p>
-          Wanderwise is a custom travel-planning assistant (a purpose-built GPT).
-          Its specialty is helping travelers discover the most popular points of
-          interest in any city and turning them into a practical, well-paced,
-          day-by-day itinerary tailored to their interests, time, and travel
-          style.
+          Wanderwise is a custom travel-planning assistant (a purpose-built GPT)
+          that I designed and built. It helps travelers discover the most popular
+          points of interest in any city and turns them into a practical,
+          well-paced, day-by-day itinerary tailored to their interests, time, and
+          travel style. The idea grew out of my own trip planning: the hardest
+          part is rarely finding information; it is filtering the flood of
+          websites, blogs, and videos into a plan you can actually follow.
         </p>
 
-        <h2>Ideas and Insights</h2>
+        <h2>Objective</h2>
         <p>
-          The initial idea for Wanderwise came from how I usually plan trips. I
-          realized that the biggest challenge is not finding information but
-          filtering it. Travelers often open many websites, blogs, and videos,
-          yet still struggle to decide what is actually worth visiting — so I
-          wanted to create a chatbot that gathers and filters attraction info
-          for them.
-        </p>
-        <p>
-          On top of that, people naturally describe their travel style with
-          phrases like "relaxed," "not packed," or "I just want to see the
-          highlights." Instead of asking users to configure many settings, the
-          assistant should understand these natural descriptions and adapt the
-          itinerary accordingly.
+          The objective was to design a conversational AI assistant that gathers
+          and filters attraction information for a destination and produces a
+          realistic, personalized itinerary, while understanding natural
+          descriptions of travel style such as "relaxed," "not packed," or "just
+          the highlights."
         </p>
 
-        <h2>Decisions and Rationales</h2>
-        <ul>
-          <li>Always ask for a destination before planning, since an itinerary can't be created without knowing where the user wants to go.</li>
-          <li>Limit the conversation to two to four questions so it never feels like filling out a survey.</li>
-          <li>Present six to ten genuinely popular attractions before building the itinerary, so users can customize the plan instead of receiving a fixed schedule.</li>
-          <li>Require meal breaks, rest stops, and realistic travel times, because a practical itinerary is more valuable than one that simply crams in as many attractions as possible.</li>
-        </ul>
-
-        <h2>Iterations</h2>
+        <h2>Project Overview</h2>
         <p>
-          Wanderwise evolved through several iterations. My first design
-          generated an itinerary immediately after collecting a few
-          preferences, but users had no chance to choose which attractions
-          interested them most. I revised the flow so Wanderwise first presents
-          a list of the most popular attractions, then asks users to select the
-          ones they want before generating the itinerary.
+          Wanderwise runs entirely through conversation. It greets the user, asks
+          where they want to go, and then gathers just two to four preferences
+          such as trip length, interests, and pace. Before building anything, it
+          presents six to ten genuinely popular attractions so the traveler can
+          choose what matters most to them.
         </p>
         <p>
-          I also improved the presentation by showing an image with each
-          attraction rather than placing all images at the beginning, making the
-          recommendations easier to browse. After testing, I refined the prompts
-          to feel more natural — removing rigid step titles and using a
-          friendlier, more conversational style.
+          From those choices, Wanderwise builds a day-by-day itinerary that groups
+          nearby stops, respects opening hours, and includes meal breaks, rest
+          stops, and realistic travel times between locations. The plan adapts to
+          the requested pace, whether that is a relaxed trip with a few highlights
+          or a packed schedule that covers as much as possible.
         </p>
-
-        <h2>Challenges and Solutions</h2>
-        <p>
-          One challenge was balancing personalization with simplicity. Asking
-          too many questions produced better recommendations but made the
-          interaction feel slow, while asking too few led to generic
-          itineraries. I addressed this by collecting only the most important
-          information and inferring reasonable defaults whenever possible.
-        </p>
-        <p>
-          Another challenge was keeping itineraries realistic rather than overly
-          ambitious. I added rules that group nearby attractions, include meal
-          and coffee breaks, and adjust the number of attractions based on the
-          user's preferred pace. Finally, I added guardrails instructing the
-          assistant not to invent attraction details, prices, or opening hours,
-          and instead rely on current information or clearly tell users when to
-          verify those details themselves.
-        </p>
-
-        <h2>Try it</h2>
         <figure class="artifact__figure">
           <img src="../assets/wanderwise-screenshot.png" alt="Screenshot of the Wanderwise GPT welcome screen" />
           <figcaption>Wanderwise in ChatGPT, ready to plan a trip.</figcaption>
         </figure>
+
+        <h2>Process</h2>
         <p>
-          Just name a city — and, if you know them, your trip length and interests
-          — and Wanderwise takes it from there.
+          This was an individual project; I was the sole designer and builder. I
+          worked through the following steps:
+        </p>
+        <ul>
+          <li>Framed the problem as filtering information rather than finding it, and defined the core user experience.</li>
+          <li>Designed the conversation flow: ask for a destination first, then gather just two to four preferences.</li>
+          <li>Wrote and iterated on the GPT's instructions, including how it ranks attractions, paces days, and formats output.</li>
+          <li>Tested with sample destinations and refined the prompts, presentation, and guardrails based on the results.</li>
+        </ul>
+
+        <h2>Tools &amp; Technologies</h2>
+        <ul>
+          <li>OpenAI Custom GPT builder (GPT-5.5 Instant)</li>
+          <li>Prompt engineering and instruction design</li>
+          <li>Conversational UX and interaction design</li>
+          <li>Iterative testing with real destinations</li>
+        </ul>
+
+        <h2>Value Proposition</h2>
+        <p>
+          Wanderwise showcases prompt and instruction design, conversational UX
+          thinking, and the ability to translate an ambiguous everyday problem
+          into a structured, usable AI product, complete with sensible defaults
+          and guardrails against unreliable output.
+        </p>
+        <p>
+          It aligns with my personal value proposition of turning ambiguous
+          problems into reliable products and applying AI responsibly. For those
+          in software, data, and AI roles, it demonstrates end-to-end product
+          design rather than a single feature.
+        </p>
+
+        <h2>Key Learnings</h2>
+        <p>
+          The biggest lesson was balancing personalization with simplicity:
+          asking too many questions slowed the experience, while too few produced
+          generic itineraries. I learned to collect only the most important
+          information and infer sensible defaults whenever possible.
+        </p>
+        <p>
+          Testing also reshaped the product. Early feedback showed users wanted to
+          choose their own attractions rather than receive a fixed schedule, so I
+          reworked the flow to present a ranked list and let them select before the
+          itinerary is generated. I moved images inline with each attraction to
+          make the list easier to scan, removed rigid step titles for a friendlier
+          tone, and added guardrails so the assistant never invents attractions,
+          prices, or hours.
         </p>
 
         <div class="artifact__links">
