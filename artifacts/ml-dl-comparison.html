@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machine Learning vs. Deep Learning Case Study | Mengtian Zhou</title>
+  <meta name="description" content="A case-study analysis comparing traditional machine learning and deep learning, using customer churn prediction and medical image recognition to show when each approach fits best." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html" class="nav__brand">MZ</a>
+    <nav class="nav__links">
+      <a href="../index.html#bio">Bio</a>
+      <a href="../index.html#value">Value</a>
+      <a href="../index.html#artifacts">Artifacts</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="artifact is-visible">
+      <a class="artifact__back" href="../index.html#artifacts">← Back to artifacts</a>
+      <p class="artifact__eyebrow">Artifact 2</p>
+      <h1 class="artifact__title">Machine Learning vs. Deep Learning Case Study</h1>
+      <ul class="artifact__tags">
+        <li>Case Study</li>
+        <li>ML / DL</li>
+        <li>Technical Writing</li>
+      </ul>
+
+      <div class="artifact__body">
+        <h2>Introduction</h2>
+        <p>
+          This artifact is a written case-study analysis comparing machine
+          learning (ML) and deep learning (DL), produced for AIML-500 Machine
+          Learning Fundamentals. Both are subfields of artificial intelligence,
+          but they solve problems in different ways. Traditional machine learning
+          relies on humans to hand-pick the important features in the data and
+          then applies algorithms such as decision trees, support vector
+          machines, or regression. Deep learning uses multi-layered neural
+          networks that automatically discover the relevant features directly from
+          raw data, at the cost of needing far more data and computing power.
+        </p>
+
+        <h2>Objective</h2>
+        <p>
+          The objective was to analyze, using real-world examples, when
+          traditional machine learning is the better fit and when deep learning
+          is the better fit. For each example I described a deployed real-world
+          application, explained why the chosen approach suits the problem, and
+          explained why the alternative approach would not.
+        </p>
+
+        <h2>Project Overview</h2>
+        <p>
+          The analysis studies two contrasting examples: one simple machine
+          learning problem and one deep learning problem.
+        </p>
+
+        <h3>Example 1 (Simple Machine Learning): Customer Churn Prediction</h3>
+        <p>
+          Subscription businesses such as telecom carriers, streaming platforms,
+          and SaaS companies need to know in advance which customers are likely to
+          cancel so they can intervene with retention offers. A support vector
+          machine (SVM) can be trained on clearly defined, structured features
+          such as contract length, monthly charges, number of support calls, and
+          tenure to flag at-risk customers. This is a proven, deployed
+          application: the mobile operator Kcell reduced churn by 10.4% with a
+          production churn model, and Nguyen et al. (2022) built a kernel SVM
+          churn model that reached a 99% F1-score and 98.9% accuracy. Machine
+          learning fits here because the data is structured, human-selected
+          features work well, the datasets are small and cheap to train, and the
+          results are interpretable. Deep learning is a poor fit because it is
+          data hungry, adds unnecessary complexity and cost, and behaves like a
+          black box.
+        </p>
+
+        <h3>Example 2 (Deep Learning): Image Recognition</h3>
+        <p>
+          In healthcare, deep learning is used to analyze medical images such as
+          X-rays and MRIs to detect potentially cancerous lesions or tumors. A
+          convolutional neural network (CNN) is trained on large collections of
+          labeled scans and learns the subtle visual patterns that distinguish
+          healthy tissue from suspicious growths, acting as a second set of eyes
+          for a radiologist. Google Health and DeepMind built a breast-cancer
+          screening system from an ensemble of three CNNs that reduced both false
+          positives and false negatives and outperformed all six radiologists in
+          an independent reader study (McKinney et al., 2020). Deep learning fits
+          here because the data is unstructured and high-dimensional, features
+          cannot realistically be hand-coded, the patterns are complex and
+          nonlinear, and large datasets and GPUs are available. Simple machine
+          learning is a poor fit because manual feature engineering on raw pixels
+          is impractical and cannot capture spatial complexity.
+        </p>
+
+        <p>Table 1 summarizes the key differences highlighted by these examples.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Simple Machine Learning (Churn Prediction)</th>
+              <th>Deep Learning (Image Recognition)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data type</td>
+              <td>Structured / tabular</td>
+              <td>Unstructured (raw images)</td>
+            </tr>
+            <tr>
+              <td>Feature extraction</td>
+              <td>Manual (human-selected)</td>
+              <td>Automatic (learned by the network)</td>
+            </tr>
+            <tr>
+              <td>Data volume needed</td>
+              <td>Smaller datasets work well</td>
+              <td>Requires large datasets</td>
+            </tr>
+            <tr>
+              <td>Computational cost</td>
+              <td>Low; fast to train</td>
+              <td>High; needs GPUs</td>
+            </tr>
+            <tr>
+              <td>Interpretability</td>
+              <td>High (easier to explain)</td>
+              <td>Low ("black box")</td>
+            </tr>
+            <tr>
+              <td>Best-fit example</td>
+              <td>Predicting customer churn</td>
+              <td>Detecting tumors in medical scans</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="artifact__note">
+          Note. This table was generated with the assistance of AI (Anthropic's
+          Claude [Opus 4.8], accessed through Cursor), which synthesized and
+          summarized the comparison discussed above. The content is based on the
+          course lesson and Dilmegani and Sezer (2026), and was reviewed by the
+          author for accuracy.
+        </p>
+
+        <h2>Process</h2>
+        <p>This was an individual assignment. I worked through the following steps:</p>
+        <ul>
+          <li>Reviewed the lesson concepts on machine learning versus deep learning and their trade-offs.</li>
+          <li>Selected two contrasting real-world examples: one structured-data ML problem and one unstructured-data DL problem.</li>
+          <li>Researched deployed applications and peer-reviewed results to ground each example in evidence.</li>
+          <li>Analyzed why each approach fit its problem across data type, feature extraction, data volume, cost, and interpretability.</li>
+          <li>Summarized the comparison in a table and wrote the analysis in APA style with cited sources.</li>
+        </ul>
+
+        <h2>Tools &amp; Technologies</h2>
+        <ul>
+          <li>Academic and technical research (peer-reviewed papers and industry case studies)</li>
+          <li>Comparative analysis across data type, cost, and interpretability</li>
+          <li>AI assistance for synthesizing the summary table, reviewed for accuracy</li>
+        </ul>
+
+        <h2>Value Proposition</h2>
+        <p>
+          This artifact demonstrates my ability to reason about machine learning
+          design decisions, not just implement models. It shows that I can
+          evaluate trade-offs between approaches, ground claims in real
+          deployments and research, and communicate technical decisions clearly.
+        </p>
+        <p>
+          For those in software, data, and AI roles, this decision-making skill
+          matters as much as coding: choosing the right approach for the data and
+          constraints is often what makes a project succeed.
+        </p>
+
+        <h2>Key Learnings</h2>
+        <p>
+          The clearest takeaway is that neither approach is universally better.
+          The right choice depends on the data type and volume, the available
+          computing resources, and whether the results need to be easily
+          explained. I learned to match the method to the problem: simple,
+          interpretable models for structured data with well-understood features,
+          and deep networks for large, unstructured data with complex patterns.
+        </p>
+        <p>
+          Researching real deployments also reinforced how much practical
+          constraints such as cost, data availability, and interpretability shape
+          real machine learning decisions, not just raw accuracy.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+          <li>Anthropic. (2026). <em>Claude (Opus 4.8)</em> [Large language model]. https://claude.ai</li>
+          <li>Data Science Society. (n.d.). <em>Deep learning: The technology shaping the future.</em></li>
+          <li>Dilmegani, C., &amp; Sezer, S. (2026, March 10). <em>Top 50 deep learning use case &amp; case studies.</em> AIMultiple.</li>
+          <li>Eastwind. (n.d.). <em>How ML models drove a 7.3% revenue uplift for Kcell: An Eastwind case study.</em></li>
+          <li>McKinney, S. M., et al. (2020). International evaluation of an AI system for breast cancer screening. <em>Nature, 577</em>(7788), 89&ndash;94.</li>
+          <li>Nguyen, N. Y., Tran, V. L., &amp; Dao, V. T. S. (2022). Churn prediction in telecommunication industry using kernel Support Vector Machines. <em>PLOS ONE, 17</em>(5), e0267935.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Mengtian Zhou · <span id="year"></span></p>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

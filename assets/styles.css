@@ -636,6 +636,36 @@ a {
   text-align: center;
 }
 
+.artifact__body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 16px;
+  font-size: 0.9rem;
+}
+
+.artifact__body th,
+.artifact__body td {
+  border: 1px solid rgba(136, 146, 176, 0.25);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--text-muted);
+}
+
+.artifact__body thead th {
+  color: var(--text-bright);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--accent-soft);
+}
+
+.artifact__note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
 .artifact__body h2 {
   color: var(--text-bright);
   font-size: 1.4rem;
