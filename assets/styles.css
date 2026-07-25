@@ -707,7 +707,90 @@ a {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin: 8px 0 24px;
+}
+
+/* ---------- Conversation transcript ---------- */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 760px;
+  margin: 8px 0 32px;
+}
+
+.chat__meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.chat__msg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 88%;
+}
+
+.chat__msg--coach {
+  align-self: flex-start;
+}
+
+.chat__msg--student {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chat__bubble {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+.chat__msg--coach .chat__bubble {
+  background: var(--bg-elevated);
+  border-top-left-radius: 4px;
+}
+
+.chat__msg--student .chat__bubble {
+  background: var(--accent-soft);
+  border-top-right-radius: 4px;
+  color: var(--text-bright);
+}
+
+.chat__bubble p {
+  margin: 0 0 8px;
+  color: inherit;
+}
+
+.chat__bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.chat__bubble ol,
+.chat__bubble ul {
+  margin: 0 0 8px 1.2em;
+  color: inherit;
+}
+
+.chat__bubble li {
+  margin-bottom: 2px;
+  padding-left: 0;
+  color: inherit;
+}
+
+.chat__bubble li::before {
+  content: none;
 }
 
 /* ---------- Footer ---------- */
