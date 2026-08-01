@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Challenge Scenarios: Reasoning Through Real ML Problems | Mengtian Zhou</title>
+  <meta name="description" content="An AI-guided problem-solving dialogue working through three real-world machine learning data challenges: missing data, imbalanced datasets, and data and concept drift." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html" class="nav__brand">MZ</a>
+    <nav class="nav__links">
+      <a href="../index.html#bio">Bio</a>
+      <a href="../index.html#value">Value</a>
+      <a href="../index.html#artifacts">Artifacts</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="artifact is-visible">
+      <a class="artifact__back" href="../index.html#artifacts">← Back to artifacts</a>
+      <p class="artifact__eyebrow">Artifact 4</p>
+      <h1 class="artifact__title">Data Challenge Scenarios: Reasoning Through Real ML Problems</h1>
+      <ul class="artifact__tags">
+        <li>AI-Guided Learning</li>
+        <li>Data Challenges</li>
+        <li>Problem Solving</li>
+      </ul>
+
+      <div class="artifact__body">
+        <h2>Introduction</h2>
+        <p>
+          This artifact is an AI-guided problem-solving session for AIML-500
+          Machine Learning Fundamentals. Instead of reading about data problems in
+          the abstract, I worked one-on-one with a pre-trained chatbot coach. It
+          handed me three realistic scenarios and asked me to think out loud. For
+          each one I laid out how I would approach it, and the coach pushed back
+          with harder questions until I had defended every decision. The exercise
+          rewarded clear reasoning, not a single correct answer.
+        </p>
+
+        <h2>Objective</h2>
+        <p>
+          The goal was to practice diagnosing the messy data problems that show up
+          constantly in real machine learning work. Three scenarios moved from
+          straightforward to hard: missing data in a churn model, fraud detection
+          on a badly imbalanced dataset, and telling data drift apart from concept
+          drift in a live recommendation system. Each one made me choose metrics,
+          weigh trade-offs, and think about what happens after a model ships.
+        </p>
+
+        <h2>Project Overview</h2>
+        <p>
+          The coach walked me through the three scenarios in sequence, each set in
+          a concrete business context. I treated every scenario as an open
+          conversation rather than a quiz. When I had glossed over a detail, I
+          doubled back, for example to compare which imputation method actually
+          fits a skewed count feature. The full exchange with the Data Challenge
+          Scenarios Coach is preserved on a separate page.
+        </p>
+        <p class="artifact__links">
+          <a class="btn btn--ghost" href="data-challenge-scenarios-conversation.html">Read the full conversation →</a>
+        </p>
+
+        <p>Table 1 summarizes the three data challenges I worked through.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Missing Data</th>
+              <th>Imbalanced Data</th>
+              <th>Data &amp; Concept Drift</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Setting</td>
+              <td>Telecom churn model</td>
+              <td>Credit card fraud detection</td>
+              <td>E-commerce recommendations</td>
+            </tr>
+            <tr>
+              <td>Core problem</td>
+              <td>15% of records missing, plus placeholder values</td>
+              <td>Only 0.05% of cases are fraud</td>
+              <td>Click-through rate fell after deployment</td>
+            </tr>
+            <tr>
+              <td>Key insight</td>
+              <td>Missingness itself can carry signal</td>
+              <td>Accuracy hides a model that catches no fraud</td>
+              <td>Separate feature shift from relationship shift</td>
+            </tr>
+            <tr>
+              <td>My approach</td>
+              <td>Median imputation plus a missing-value indicator</td>
+              <td>Recall/precision/F1 with cost-based threshold tuning</td>
+              <td>KS test, PSI, and JS divergence on a drift dashboard</td>
+            </tr>
+            <tr>
+              <td>Safeguard</td>
+              <td>Monitor the pattern and retrain on drift</td>
+              <td>Validate on untouched test data</td>
+              <td>Retrain on data drift, redesign on concept drift</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="artifact__note">
+          Note. This table was generated with the assistance of AI (Anthropic's
+          Claude [Opus 4.8]), which summarized the dialogue captured during the
+          activity. The content is based on my conversation with the Data
+          Challenge Scenarios Coach and was reviewed by the author for accuracy.
+        </p>
+
+        <h2>Process</h2>
+        <p>This was an individual, dialogue-based activity. I worked through the following steps:</p>
+        <ul>
+          <li>Reviewed the assignment rubric and the framing for each data challenge scenario.</li>
+          <li>Joined the pre-trained chatbot coach and worked through the three scenarios one at a time.</li>
+          <li>Explained my reasoning for each decision, then answered the coach's follow-up questions on metrics, methods, and trade-offs.</li>
+          <li>Captured the full conversation on a transcript page and synthesized (by Claude [Opus 4.8]) the takeaways into this artifact.</li>
+        </ul>
+
+        <h2>Tools &amp; Technologies</h2>
+        <ul>
+          <li>SchoolAI Data Challenge Scenarios Coach (pre-trained chatbot)</li>
+          <li>AI assistance for synthesizing the summary, reviewed for accuracy</li>
+        </ul>
+
+        <h2>Value Proposition</h2>
+        <p>
+          This artifact shows that I can reason through open-ended data problems,
+          not just recite definitions. In each scenario I picked metrics that
+          matched the business cost, weighed competing techniques against each
+          other, and planned for what happens once a model is live. That judgment
+          separates someone who can run a model from someone who can own one in
+          production.
+        </p>
+        <p>
+          For employers and collaborators in software, data, and AI roles, this
+          shows practical fluency with the everyday realities of machine learning:
+          dirty data, skewed classes, and models that quietly degrade over time.
+          It also shows that I use an AI coach to sharpen my thinking, not to hand
+          me answers.
+        </p>
+
+        <h2>Key Learnings</h2>
+        <p>
+          The clearest theme across all three scenarios: the technique matters
+          less than understanding why the data behaves the way it does. Missing
+          values can be a signal worth keeping. A high accuracy number can hide a
+          useless model. A drop in performance can come from two different kinds
+          of drift that need different fixes. Naming the right cause is what points
+          you to the right response.
+        </p>
+        <p>
+          I also built a stronger habit of tying decisions back to business cost
+          and to life after deployment. I set the fraud threshold by weighing a
+          $500 missed fraud against a $20 false alarm. I set up monitoring so a
+          stale feature triggers a retrain. That framing made the work feel less
+          like a homework exercise and more like the ongoing job of keeping a
+          system honest.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+          <li>Anthropic. (2026). <em>Claude (Opus 4.8)</em> [Large language model]. https://claude.ai</li>
+          <li>SchoolAI. (2026). <em>Data Challenge Scenarios Coach</em> [AI chatbot]. https://student.schoolai.com</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Mengtian Zhou · <span id="year"></span></p>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>
