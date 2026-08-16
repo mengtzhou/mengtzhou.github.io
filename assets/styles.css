@@ -639,6 +639,7 @@ a {
 .artifact__body table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   margin: 8px 0 16px;
   font-size: 0.9rem;
 }
@@ -649,7 +650,14 @@ a {
   padding: 10px 12px;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: break-word;
   color: var(--text-muted);
+}
+
+/* Row-label column stays narrow so the comparison columns share the rest evenly. */
+.artifact__body th:first-child,
+.artifact__body td:first-child {
+  width: 20%;
 }
 
 .artifact__body thead th {

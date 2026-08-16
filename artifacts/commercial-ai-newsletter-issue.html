@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A newsletter examining recent commercial AI developments in technology, healthcare, and retail.">
+  <title>AI at Work: Smarter Technology, Safer Healthcare, and Easier Shopping</title>
+  <style>
+    :root {
+      --navy: #14213d;
+      --blue: #1f5f99;
+      --teal: #147d7e;
+      --gold: #f2b84b;
+      --cream: #fff8e8;
+      --ink: #202733;
+      --muted: #5f6875;
+      --line: #d9e1e8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef2f5;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--teal); }
+    .newsletter {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 10px 40px rgba(20, 33, 61, 0.12);
+    }
+    .portfolio-link {
+      position: fixed;
+      z-index: 10;
+      top: 16px;
+      left: 16px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      color: white;
+      background: rgba(20,33,61,.82);
+      font-size: .8rem;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+    }
+    .portfolio-link:hover { color: white; background: var(--navy); }
+    .masthead {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 64px clamp(24px, 7vw, 80px) 58px;
+      color: white;
+      background: linear-gradient(130deg, var(--navy), var(--blue) 60%, var(--teal));
+    }
+    .masthead > * { position: relative; z-index: 1; }
+    .masthead::before {
+      position: absolute;
+      top: -180px;
+      right: -70px;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: rgba(242, 184, 75, 0.28);
+      content: "";
+    }
+    .edition, .kicker {
+      margin: 0 0 18px;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .edition, .byline { color: #d9eefb; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+    .dek {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: #eef8ff;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      line-height: 1.55;
+    }
+    .byline { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 32px; font-size: .9rem; }
+    .content { padding: 48px clamp(22px, 7vw, 76px) 70px; }
+    .issue-overview {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 34px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+    .issue-overview > h2 { grid-column: 1 / -1; margin-bottom: 0; }
+    .intro::first-letter {
+      float: left;
+      margin: 10px 9px 0 0;
+      color: var(--blue);
+      font: 700 4.7rem/.7 Georgia, serif;
+    }
+    .contents-card {
+      padding: 24px;
+      border-top: 5px solid var(--gold);
+      background: var(--cream);
+    }
+    .contents-card h2 { margin: 0 0 12px; font: 700 1rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .contents-card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+    .contents-card p + p { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(242,184,75,.5); }
+    .industry-map {
+      margin: 0 0 62px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f9fbfc;
+    }
+    .industry-map h2 { margin-top: 0; text-align: center; }
+    .map-grid, .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .map-card {
+      padding: 20px;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 3px 12px rgba(20,33,61,.08);
+      text-align: center;
+    }
+    .map-card strong, .map-card span { display: block; }
+    .map-card strong { color: var(--navy); font-size: 1.05rem; }
+    .map-card span { margin-top: 7px; color: var(--muted); font-size: .88rem; line-height: 1.45; }
+    h2 { color: var(--navy); font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.2; }
+    h3 { margin: 36px 0 10px; color: var(--blue); font-size: 1.25rem; line-height: 1.35; }
+    p { margin: 0 0 18px; }
+    .industry { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); }
+    .industry-hero {
+      --accent: var(--blue);
+      display: grid;
+      grid-template-columns: minmax(0,.9fr) minmax(0,1.25fr);
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 34px;
+      padding: 28px;
+      border-top: 5px solid var(--accent);
+      border-radius: 10px;
+      background: #f7fafc;
+    }
+    #healthcare .industry-hero { --accent: var(--teal); }
+    #retail .industry-hero { --accent: var(--gold); }
+    .kicker { margin-bottom: 5px; color: var(--accent, var(--teal)); }
+    .industry-hero h2 { margin: 0 0 18px; font-size: clamp(1.65rem, 3vw, 2.25rem); }
+    .hero-summary { margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.55; }
+    .section-visual { margin: 8px 0 32px; }
+    .industry-hero .section-visual { margin: 0; }
+    .section-visual img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 18px rgba(20,33,61,.14); }
+    figcaption { margin-top: 9px; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+    .industry > p, .industry > h3, .industry > .news-item, .industry > .metrics,
+    .industry > .callout, .industry > .steps { max-width: 800px; margin-left: auto; margin-right: auto; }
+    .industry > p { line-height: 1.75; }
+    .news-item { margin-top: 38px; margin-bottom: 18px; padding-top: 22px; border-top: 2px solid var(--line); }
+    .news-item h3 { margin: 0 0 10px; color: var(--navy); }
+    .metrics { gap: 14px; margin-top: 28px; margin-bottom: 28px; }
+    .metric { padding: 18px; border-radius: 8px; background: #e8f6f3; text-align: center; }
+    .metric strong { display: block; color: var(--teal); font-size: 1.55rem; line-height: 1.2; }
+    .metric span { display: block; margin-top: 6px; color: var(--muted); font-size: .82rem; line-height: 1.35; }
+    .callout { margin-top: 28px; margin-bottom: 28px; padding: 20px 24px; border-left: 5px solid var(--gold); background: var(--cream); }
+    .callout strong { color: var(--navy); }
+    .steps { counter-reset: step; display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; padding: 0; list-style: none; }
+    .steps li { position: relative; min-height: 92px; padding: 18px 18px 18px 58px; border: 1px solid var(--line); border-radius: 8px; background: #fbfcfd; }
+    .steps li::before {
+      counter-increment: step;
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--blue);
+      content: counter(step);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .conclusion { margin-top: 62px; padding: 34px; border-radius: 12px; color: white; background: var(--navy); }
+    .conclusion h2 { margin-top: 0; color: white; }
+    .conclusion-list { margin: 22px 0; padding: 0; list-style: none; }
+    .conclusion-list li { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.18); color: #e7edf5; }
+    .conclusion-label { display: inline-block; min-width: 105px; color: var(--gold); font-weight: 600; }
+    .references { margin-top: 48px; padding: 22px 26px; border-top: 1px solid var(--line); color: var(--muted); background: #f7f8fa; font-size: .78rem; line-height: 1.45; }
+    .references h2 { margin: 0 0 18px; color: var(--muted); font: 700 .84rem Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+    .reference { margin: 0 0 11px; padding-left: 2em; text-indent: -2em; overflow-wrap: anywhere; }
+    .ai-disclosure { margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: .7rem; line-height: 1.4; }
+    .footer { padding: 20px; color: #d9eefb; background: var(--navy); font-size: .8rem; text-align: center; }
+    @media (max-width: 760px) {
+      .issue-overview, .industry-hero, .map-grid, .metrics, .steps { grid-template-columns: 1fr; }
+      .masthead { padding-top: 72px; }
+    }
+    @media print {
+      .portfolio-link { display: none; }
+      body { background: white; font-size: 11pt; }
+      .newsletter { width: 100%; box-shadow: none; }
+      .industry, .industry-hero, .news-item, .callout, .metric, .map-card, .section-visual, .references { break-inside: avoid; }
+      * { print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <a class="portfolio-link" href="commercial-ai-newsletter.html">← Back to artifact</a>
+  <article class="newsletter">
+    <header class="masthead">
+      <p class="edition">The Commercial AI Brief · August 2026</p>
+      <h1>AI at Work</h1>
+      <p class="dek">Smarter technology, safer healthcare, and easier shopping: recent developments show how artificial intelligence is creating practical business value.</p>
+      <div class="byline">
+        <span><strong>Mengtian Zhou</strong></span>
+        <span>Indiana Wesleyan University</span>
+        <span>AIML-500: Machine Learning Foundations</span>
+        <span>Dr. Asabe Dawudu</span>
+        <span>August 15, 2026</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="issue-overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">How AI Is Changing Industries</h2>
+        <div>
+          <p class="intro">Artificial intelligence is moving beyond the chatbot and into everyday business. Companies are now using AI to build better software, automate business tasks, support doctors, and help customers shop.</p>
+          <p>This newsletter looks at recent AI developments across <strong>three industries: technology, healthcare, and retail</strong>. Each industry shows a different way that AI is being used in the real world.</p>
+          <p>In <strong>technology</strong>, the focus is on more capable and affordable AI models, as well as AI agents that can complete business tasks. In <strong>healthcare</strong>, AI is being used to support surgeons during breast cancer surgery. In <strong>retail</strong>, conversational AI is helping customers find products based on what they want to create.</p>
+          <p>Together, these industries show three important areas of commercial AI:</p>
+          <ul>
+            <li><strong>Technology</strong> provides the AI models and platforms that businesses can build on.</li>
+            <li><strong>Healthcare</strong> shows how AI can support high-stakes professional decisions.</li>
+            <li><strong>Retail</strong> shows how AI can improve everyday customer experiences.</li>
+          </ul>
+          <p>The key question is no longer simply, <strong>“Can AI do it?”</strong> The more important question is, <strong>“Can AI do it reliably, affordably, and in a way that creates real value?”</strong></p>
+        </div>
+        <aside class="contents-card" aria-label="Issue snapshot">
+          <h2>Issue snapshot</h2>
+          <p><strong>Coverage:</strong><br>Technology, healthcare, and retail</p>
+          <p><strong>Developments:</strong><br>Four recent commercial AI releases</p>
+          <p><strong>Research window:</strong><br>July 21–August 13, 2026</p>
+        </aside>
+      </section>
+
+      <figure class="industry-map">
+        <h2>From AI capability to business outcome</h2>
+        <div class="map-grid">
+          <div class="map-card"><strong>Technology</strong><span>Gemini 3.7 Flash, Claude Opus 5, and OpenAI Presence make AI more capable, economical, and connected.</span></div>
+          <div class="map-card"><strong>Healthcare</strong><span>Claire gives surgeons additional information while a patient is still in the operating room.</span></div>
+          <div class="map-card"><strong>Retail</strong><span>Ask Mike turns a shopper's project idea into conversational product discovery.</span></div>
+        </div>
+        <figcaption>Figure 1. Recent commercial AI developments span underlying models, enterprise deployment, and specialized applications. AI-assisted diagram created for this newsletter.</figcaption>
+      </figure>
+
+      <section class="industry" id="technology">
+        <div class="industry-hero">
+          <div>
+            <p class="kicker">Industry 01 · Technology</p>
+            <h2>From Better AI Models to Business AI Agents</h2>
+            <p class="hero-summary">The technology industry is moving in two connected directions: making AI models more capable and affordable, and giving AI the ability to complete real business tasks.</p>
+          </div>
+          <figure class="section-visual">
+            <img src="../assets/newsletter-ai-platforms.png" alt="OpenAI, Gemini, and Claude logos displayed side by side">
+            <figcaption>Figure 2. OpenAI, Gemini, and Claude represent three major commercial AI platforms. Image from Lukičić (2024).</figcaption>
+          </figure>
+        </div>
+
+        <div class="news-item">
+          <h3>Gemini 3.7 Flash and Claude Opus 5</h3>
+          <p>Recent releases from Google and Anthropic show that AI competition is no longer just about building the most powerful model. Companies are also competing on <strong>price, speed, and practical performance</strong>.</p>
+        </div>
+        <p>Anthropic released <strong>Claude Opus 5</strong> on July 24, 2026. The model is designed for coding, professional work, and long-running AI agents. Anthropic priced it at $5 per million input tokens and $25 per million output tokens, the same price as its previous Opus 4.8 model, while reporting major improvements in performance (Anthropic, 2026).</p>
+        <p>Google followed on August 13 with <strong>Gemini 3.7 Flash</strong>. The model is designed for coding, software agents, web development, and other knowledge work. Google made it available through its Gemini API and enterprise AI products. Its introductory price is $0.75 per million input tokens and $3.75 per million output tokens, half the original price of Gemini 3.6 Flash (Google, 2026).</p>
+        <div class="metrics" aria-label="Selected model pricing">
+          <div class="metric"><strong>$0.75</strong><span>Gemini 3.7 Flash introductory input price per million tokens</span></div>
+          <div class="metric"><strong>$5</strong><span>Claude Opus 5 input price per million tokens</span></div>
+          <div class="metric"><strong>2 tiers</strong><span>Different price and performance levels for different business tasks</span></div>
+        </div>
+        <p>These models are not direct substitutes because they target different levels of performance and cost. However, they point to an important trend: <strong>businesses now have more choices when deciding how much AI capability they actually need</strong>.</p>
+        <p>For example, a company could use Claude Opus 5 for complex coding or analysis while using a lower-cost model such as Gemini 3.7 Flash for high-volume tasks. This could make AI more affordable for customer support, document processing, software development, and internal research.</p>
+
+        <div class="news-item">
+          <h3>OpenAI Presence: Turning AI Into Business Work</h3>
+          <p>The next step is moving from AI that generates answers to AI that can actually <strong>complete business tasks</strong>.</p>
+        </div>
+        <p>On July 22, 2026, OpenAI introduced <strong>OpenAI Presence</strong>, an enterprise product designed to deploy AI agents in voice and chat interactions.</p>
+        <p>A traditional chatbot mainly answers questions. A Presence agent can do more. It can access company information, use internal systems, follow company policies, take approved actions, and transfer a case to a human when needed (OpenAI, 2026).</p>
+        <p>For example, a customer calling about an incorrect bill could have the agent verify the customer, check account information, explain the charge, make an approved correction, and record the result. If the situation is unusual or risky, the agent could transfer the case to an employee.</p>
+        <p>This changes customer service from a series of separate manual steps into <strong>one connected workflow</strong>.</p>
+        <p>The product also shows why AI agents require more controls than basic chatbots. An agent that can access business systems or change customer information needs clear limits, testing, evaluation, and escalation rules.</p>
+        <h3>What comes next?</h3>
+        <p>Together, these developments suggest that the future of enterprise AI may be less about finding one “best” model and more about <strong>choosing the right model and the right AI agent for each task</strong>.</p>
+        <p>A company may use a more powerful model for complex work and a less expensive model for high-volume tasks. AI agents can then connect these capabilities to real business workflows.</p>
+        <p>However, businesses also need to look beyond model prices. Accuracy, response time, human review, and the cost of correcting mistakes all affect the real cost of using AI.</p>
+        <div class="callout"><strong>Responsible deployment:</strong> Businesses should set clear limits on what an AI agent can do and keep human review for higher-risk tasks. Success should be measured through resolution rates, accuracy, customer satisfaction, and the number and cost of errors.</div>
+      </section>
+
+      <section class="industry" id="healthcare">
+        <div class="industry-hero">
+          <div>
+            <p class="kicker">Industry 02 · Healthcare</p>
+            <h2>Claire Brings AI-Assisted Imaging Into the Operating Room</h2>
+            <p class="hero-summary">Healthcare is one of the most important areas for commercial AI because the technology can support decisions that directly affect patients.</p>
+          </div>
+          <figure class="section-visual">
+            <img src="../assets/newsletter-claire-oct.jpg" alt="Claire OCT System information graphic from Perimeter Medical Imaging AI">
+            <figcaption>Figure 3. The Claire OCT System is an AI-enabled imaging device for breast cancer surgery. Image from Mendes (2026).</figcaption>
+          </figure>
+        </div>
+        <p>On August 13, 2026, Perimeter Medical Imaging AI announced the first U.S. commercial deployment of its <strong>Claire OCT System</strong> at Intermountain Health's LDS Hospital and American Fork Hospital.</p>
+        <p>Claire combines <strong>optical coherence tomography (OCT)</strong> with an AI detection system. During breast cancer surgery, it highlights areas of removed tissue that may contain cancer cells (Perimeter Medical Imaging AI, Inc., 2026).</p>
+        <h3>Why does it matter?</h3>
+        <p>During breast-conserving surgery, surgeons need to remove cancer while keeping as much healthy tissue as possible. One challenge is determining whether cancer cells remain at the edge of the removed tissue.</p>
+        <p>Claire provides three-dimensional, cross-sectional images and highlights areas of concern while the patient is still in surgery. Surgeons can use this information along with standard medical methods when deciding whether more tissue should be removed.</p>
+        <div class="callout"><strong>An important limitation:</strong> Claire does not replace the surgeon or provide an independent diagnosis. The FDA approved it as an adjunctive tool used with physician interpretation. It cannot replace histopathology or be used by itself for diagnosis (U.S. Food and Drug Administration, 2026).</div>
+        <p>The clinical results show both benefits and trade-offs. In the pivotal study, adding Claire to standard intraoperative assessment increased margin-level sensitivity from <strong>48.7% to 61.5%</strong>. However, specificity decreased from <strong>72.1% to 65.8%</strong> (U.S. Food and Drug Administration, 2026).</p>
+        <p>In simple terms, the system helped identify more potentially diseased margins, but it also produced more false-positive findings.</p>
+        <div class="metrics" aria-label="Claire clinical study measures">
+          <div class="metric"><strong>+12.8</strong><span>Percentage-point increase in margin-level sensitivity</span></div>
+          <div class="metric"><strong>61.5%</strong><span>Combined margin-level sensitivity with device aid</span></div>
+          <div class="metric"><strong>65.8%</strong><span>Combined margin-level specificity with device aid</span></div>
+        </div>
+        <h3>What comes next?</h3>
+        <p>The commercial launch is an important step because Claire is moving from clinical testing into everyday hospital use.</p>
+        <p>The next question is whether the technology improves real patient outcomes. Hospitals will need to look at repeat surgery rates, surgery time, the amount of tissue removed, pathology results, patient experience, training time, and total cost of care.</p>
+        <p>If results remain positive across different hospitals and patient groups, AI-assisted imaging could become more common in breast cancer surgery and potentially other medical procedures.</p>
+        <p>Healthcare also shows why <strong>human oversight is especially important in AI</strong>. When an AI mistake can affect a patient's treatment, accuracy alone is not enough. Safe use also requires training, monitoring, careful workflow design, and continued evaluation.</p>
+      </section>
+
+      <section class="industry" id="retail">
+        <div class="industry-hero">
+          <div>
+            <p class="kicker">Industry 03 · Retail</p>
+            <h2>Michaels Turns Product Search Into Project Guidance</h2>
+            <p class="hero-summary">Retail AI is moving beyond the traditional search box by helping customers describe a project and discover the products needed to complete it.</p>
+          </div>
+          <figure class="section-visual">
+            <img src="../assets/newsletter-ask-mike.jpg" alt="Michaels website displaying the Ask Mike conversational shopping assistant">
+            <figcaption>Figure 4. Ask Mike provides conversational project guidance alongside the Michaels online store. Screenshot from The Michaels Companies, Inc. (2026).</figcaption>
+          </figure>
+        </div>
+        <p>On July 21, 2026, Michaels introduced <strong>Ask Mike</strong>, an AI shopping assistant built with Google Cloud's Gemini Enterprise for Customer Experience. It is available through Michaels' website and mobile apps.</p>
+        <p>Instead of asking customers to search for individual products, Ask Mike allows them to describe what they want to make or accomplish. A customer might ask, “I am planning a birthday party. What do I need?” or “I want to make curtains on a $100 budget.” The AI can then recommend products that fit the customer's project (The Michaels Companies, Inc., 2026).</p>
+        <h3>Why does it matter?</h3>
+        <p>Traditional e-commerce search works best when customers already know what they want. But craft projects, parties, and home projects often start with an <strong>idea rather than a product name</strong>.</p>
+        <p>Ask Mike changes the shopping process:</p>
+        <ol class="steps">
+          <li>The customer describes a goal.</li>
+          <li>AI understands the project and preferences.</li>
+          <li>AI connects the request to Michaels' product catalog.</li>
+          <li>The customer receives recommendations that can lead directly to a purchase.</li>
+        </ol>
+        <p>This can benefit both sides. Customers get help turning an idea into a shopping list, while Michaels gets a better understanding of what customers are trying to accomplish.</p>
+        <div class="metrics" aria-label="Ask Mike reported engagement">
+          <div class="metric"><strong>75,000</strong><span>Nearly this many conversations reported after the initial release</span></div>
+          <div class="metric"><strong>60%+</strong><span>Interactions reportedly focused on product discovery</span></div>
+          <div class="metric"><strong>27%</strong><span>Interactions reportedly producing a product click or add-to-cart action</span></div>
+        </div>
+        <p>Michaels reported nearly <strong>75,000 conversations</strong> after the assistant's initial May release, with more than 60% focused on product discovery (The Michaels Companies, Inc., 2026).</p>
+        <p>Michaels also told <em>Modern Retail</em> that Ask Mike users converted at more than twice the rate of traditional-search users, while 27% of interactions resulted in a product click or add-to-cart action (Liu, 2026).</p>
+        <p>These numbers are promising, but they should be viewed carefully. Customers who choose to use Ask Mike may already have stronger purchase intent, and Michaels has not released all of the details behind the comparison.</p>
+        <h3>What comes next?</h3>
+        <p>Ask Mike could eventually support project bundles, inventory-aware substitutions, and post-purchase instructions.</p>
+        <p>The biggest risk is <strong>trust</strong>. If the AI recommends the wrong product or provides incorrect information, customers may lose confidence in the tool.</p>
+        <p>For retail AI to create long-term value, recommendations need to be based on accurate product and inventory information. The system should also clearly separate verified product information from AI-generated suggestions.</p>
+        <p>The goal is not simply to make shopping more conversational. The goal is to help customers <strong>find the right products and complete their projects more easily</strong>.</p>
+      </section>
+
+      <section class="conclusion" id="conclusion">
+        <p class="kicker">The Big Picture</p>
+        <h2>What These Three Industries Tell Us About Commercial AI</h2>
+        <p>Looking across technology, healthcare, and retail, a clear pattern emerges: AI is becoming part of real business processes rather than remaining a stand-alone tool.</p>
+        <p>In technology, companies are making AI more affordable and giving AI agents the ability to complete business tasks. In healthcare, AI is being used as a decision-support tool in a high-stakes environment. In retail, AI is helping customers move from an idea to a purchase.</p>
+        <p>The three industries also highlight different measures of success.</p>
+        <ul class="conclusion-list">
+          <li><span class="conclusion-label">Technology</span> Balance capability, cost, speed, and accuracy.</li>
+          <li><span class="conclusion-label">Healthcare</span> Support professional judgment while protecting patient safety.</li>
+          <li><span class="conclusion-label">Retail</span> Turn customer intent into accurate and useful recommendations.</li>
+        </ul>
+        <p>Commercial AI is not valuable simply because the technology is impressive. It becomes valuable when it solves a real problem, fits into an existing workflow, creates more value than it costs, and can be used safely. The future of AI may therefore be less about asking “Which company has the smartest model?” and more about asking “Which companies can turn AI into reliable results?” As AI becomes part of more business and professional decisions, companies that combine useful technology with good data, clear measurements, and human oversight will be better positioned to turn AI into long-term business value.</p>
+      </section>
+
+      <section class="references" aria-labelledby="references-heading">
+        <h2 id="references-heading">References</h2>
+        <p class="reference">Anthropic. (2026, July 24). <em>Introducing Claude Opus 5</em>. <a href="https://www.anthropic.com/news/claude-opus-5">https://www.anthropic.com/news/claude-opus-5</a></p>
+        <p class="reference">Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P., &amp; Roberts, K. (2024). <em>Artificial intelligence risk management framework: Generative artificial intelligence profile</em> (NIST AI 600-1). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.AI.600-1">https://doi.org/10.6028/NIST.AI.600-1</a></p>
+        <p class="reference">Google. (2026, August 13). <em>Introducing Gemini 3.7 Flash</em>. <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/</a></p>
+        <p class="reference">Liu, I. (2026). Michaels sees initial success with Google-powered AI assistant. <em>Modern Retail</em>. <a href="https://www.modernretail.co/technology/michaels-says-google-powered-ai-assistant-doubles-conversion-rate-of-traditional-search/">https://www.modernretail.co/technology/michaels-says-google-powered-ai-assistant-doubles-conversion-rate-of-traditional-search/</a></p>
+        <p class="reference">Lukičić, M. (2024, June 21). <em>Maximising LLM performance: Using Claude, GPT-4o, and Gemini together for the best results</em> [Article cover image]. LinkedIn. <a href="https://www.linkedin.com/pulse/maximising-llm-performance-using-claude-gpt-4o-gemini-marko-lukičić-tccof">https://www.linkedin.com/pulse/maximising-llm-performance-using-claude-gpt-4o-gemini-marko-lukičić-tccof</a></p>
+        <p class="reference">Mendes, A. (2026, March 6). <em>The Claire OCT System represents an important regulatory milestone for Perimeter Medical Imaging AI</em> [LinkedIn post]. LinkedIn. <a href="https://www.linkedin.com/posts/adrianmendes_the-claire-oct-system-represents-an-important-activity-7435685727574839296-dx-D">https://www.linkedin.com/posts/adrianmendes_the-claire-oct-system-represents-an-important-activity-7435685727574839296-dx-D</a></p>
+        <p class="reference">OpenAI. (2026, July 22). <em>Introducing OpenAI Presence</em>. <a href="https://openai.com/index/introducing-openai-presence/">https://openai.com/index/introducing-openai-presence/</a></p>
+        <p class="reference">Perimeter Medical Imaging AI, Inc. (2026, August 13). <em>Intermountain Health brings Perimeter's Claire to the operating room, a landmark in breast cancer surgery using AI</em>. PR Newswire. <a href="https://www.prnewswire.com/news-releases/intermountain-health-brings-perimeters-claire-to-the-operating-room-a-landmark-in-breast-cancer-surgery-using-ai-302850406.html">https://www.prnewswire.com/news-releases/intermountain-health-brings-perimeters-claire-to-the-operating-room-a-landmark-in-breast-cancer-surgery-using-ai-302850406.html</a></p>
+        <p class="reference">The Michaels Companies, Inc. (2026, July 21). <em>Michaels unveils “Ask Mike” AI assistant, built with Google Cloud's Gemini Enterprise for Customer Experience</em>. PR Newswire. <a href="https://www.prnewswire.com/news-releases/michaels-unveils-ask-mike-ai-assistant-built-with-google-clouds-gemini-enterprise-for-customer-experience-302830112.html">https://www.prnewswire.com/news-releases/michaels-unveils-ask-mike-ai-assistant-built-with-google-clouds-gemini-enterprise-for-customer-experience-302830112.html</a></p>
+        <p class="reference">U.S. Food and Drug Administration. (2026, March 3). <em>Claire OCT System—P250008</em>. <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P250008">https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P250008</a></p>
+      </section>
+
+      <aside class="ai-disclosure" aria-label="AI usage disclosure">
+        AI usage disclosure: This newsletter was designed with GPT-5.6. The author reviewed the content, verified the cited sources, and is responsible for the final submission.
+      </aside>
+    </main>
+    <footer class="footer">Prepared for AIML-500: Machine Learning Foundations · Indiana Wesleyan University</footer>
+  </article>
+</body>
+</html>
