@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI at Work: The Commercial AI Brief | Mengtian Zhou</title>
+  <meta name="description" content="A newsletter analyzing four commercial AI products released between July 21 and August 13, 2026, across technology, healthcare, and retail, and what they reveal about turning AI into business value." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html" class="nav__brand">MZ</a>
+    <nav class="nav__links">
+      <a href="../index.html#bio">Bio</a>
+      <a href="../index.html#value">Value</a>
+      <a href="../index.html#artifacts">Artifacts</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-toggle__icon">◐</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="artifact is-visible">
+      <a class="artifact__back" href="../index.html#artifacts">← Back to artifacts</a>
+      <p class="artifact__eyebrow">Artifact 5</p>
+      <h1 class="artifact__title">AI at Work: The Commercial AI Brief</h1>
+      <ul class="artifact__tags">
+        <li>Commercial AI</li>
+        <li>Newsletter</li>
+        <li>Industry Analysis</li>
+      </ul>
+
+      <div class="artifact__body">
+        <p class="artifact__links">
+          <a class="btn btn--primary" href="commercial-ai-newsletter-issue.html">Read the newsletter →</a>
+        </p>
+
+        <h2>Introduction</h2>
+        <p>
+          This artifact is a newsletter I researched, wrote, and designed for
+          AIML-500 Machine Learning Foundations. It looks at four commercial AI
+          developments released between July 21 and August 13, 2026, and focuses
+          on what they actually change for businesses, not just what the
+          technology can do. I wrote it for readers who may be interested in AI
+          but do not have a technical background. The newsletter itself is the
+          artifact, presented as a standalone webpage in this portfolio.
+        </p>
+
+        <h2>Objective</h2>
+        <p>
+          The assignment was to find recent commercial AI applications across
+          three different industries and look at how they affect business
+          processes and decision-making. The research was only part of the
+          challenge. I also had to explain things like pricing, clinical results,
+          and vendor-reported metrics in a way that would make sense to someone
+          without an AI background.
+        </p>
+        <p>
+          That meant I could not simply repeat what companies said in their
+          product announcements. I had to look at the numbers more closely,
+          understand what they actually measured, and explain the limitations
+          along with the benefits.
+        </p>
+
+        <h2>Project Overview</h2>
+        <p>
+          I chose technology, healthcare, and retail because they show very
+          different ways AI is being used commercially. Technology focuses on the
+          tools businesses build with, healthcare involves a much higher-stakes
+          decision-making environment, and retail shows how AI can change a
+          familiar customer experience.
+        </p>
+        <p>
+          The products I covered were Claude Opus 5, Gemini 3.7 Flash, OpenAI
+          Presence, Perimeter's Claire OCT System, and Michaels' Ask Mike.
+          Together, they gave me examples ranging from AI model pricing and
+          enterprise agents to surgical imaging and conversational shopping.
+        </p>
+        <p>
+          One thing I wanted to avoid was making every product sound like a
+          success story. For each section, I looked at both the benefit and the
+          trade-off. I asked four basic questions: What was released? What
+          business process does it change? What do the reported numbers actually
+          tell us? And what questions are still unanswered?
+        </p>
+        <p>
+          For example, Claire's reported sensitivity increased from 48.7% to
+          61.5%, but specificity decreased from 72.1% to 65.8%. That makes the
+          result more interesting than simply saying the system became “more
+          accurate.” Similarly, Michaels' conversion numbers came from shoppers
+          who chose to use the assistant, so that group may already have had
+          stronger purchase intent than other shoppers.
+        </p>
+        <p class="artifact__links">
+          <a class="btn btn--ghost" href="commercial-ai-newsletter-issue.html">Open the full newsletter →</a>
+        </p>
+
+        <p>Table 1 summarizes the three industries covered in the newsletter.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Technology</th>
+              <th>Healthcare</th>
+              <th>Retail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Products covered</td>
+              <td>Claude Opus 5, Gemini 3.7 Flash, OpenAI Presence</td>
+              <td>Perimeter Claire OCT System</td>
+              <td>Michaels Ask Mike</td>
+            </tr>
+            <tr>
+              <td>Business process affected</td>
+              <td>Software development and customer service workflows</td>
+              <td>Intraoperative margin assessment</td>
+              <td>Product discovery and search</td>
+            </tr>
+            <tr>
+              <td>What changes</td>
+              <td>Cost-tiered model choice plus agents that take approved actions</td>
+              <td>Surgeons get 3D imaging while the patient is still in surgery</td>
+              <td>Shoppers describe a project instead of naming a product</td>
+            </tr>
+            <tr>
+              <td>Reported evidence</td>
+              <td>Claude Opus 5 reports major gains while holding Opus 4.8 pricing ($5/$25 per million tokens); Gemini 3.7 Flash at half the prior price</td>
+              <td>Sensitivity 48.7% → 61.5%; specificity 72.1% → 65.8%</td>
+              <td>~75,000 conversations; 27% led to a click or add-to-cart</td>
+            </tr>
+            <tr>
+              <td>Main caveat</td>
+              <td>Token price hides accuracy, latency, and error-correction cost</td>
+              <td>Adjunctive only; cannot replace histopathology</td>
+              <td>Users self-selected, so the comparison group differs</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="artifact__note">
+          Note. I pulled the figures in this table from the sources cited in the
+          newsletter and checked them against the original sources.
+        </p>
+
+        <h2>Process</h2>
+        <p>This was an individual project. My process was fairly straightforward:</p>
+        <ul>
+          <li>I started with the assignment rubric and defined a three-week research window so that every product I covered had actually been released during the required period.</li>
+          <li>I researched potential releases and narrowed them down to three industries that showed noticeably different uses of AI.</li>
+          <li>I checked important claims against primary sources whenever possible, including the FDA device record for Claire's clinical results and vendor sources for model pricing.</li>
+          <li>I wrote the initial analysis and then went back through it with a non-technical reader in mind. The goal was to simplify the language without removing important numbers or caveats.</li>
+          <li>I built the final newsletter as a responsive HTML page with a print stylesheet and included it in this portfolio as a standalone artifact.</li>
+        </ul>
+
+        <h2>Tools &amp; Technologies</h2>
+        <ul>
+          <li>HTML and CSS for the newsletter layout, responsive design, and print version</li>
+          <li>Primary-source research using vendor announcements, FDA records, and trade press</li>
+          <li>GPT-5.6 for assistance with drafting and layout ideas; I reviewed and fact-checked the generated content myself</li>
+          <li>APA citations for the sources and images used in the newsletter</li>
+        </ul>
+
+        <h2>Value Proposition</h2>
+        <p>
+          The main value of this project is that it pushed me to look at AI
+          products from a business perspective instead of just a technical one.
+          For each product, I tried to identify the actual workflow being changed,
+          understand what the reported results did and did not prove, and consider
+          what a company would be giving up by adopting the technology.
+        </p>
+        <p>
+          That last part became especially important during the research. A
+          product can have impressive benchmark results or a lower price and still
+          be a poor fit for a particular organization. The real question is
+          whether it solves a meaningful problem and can be introduced into an
+          existing workflow without creating bigger problems somewhere else.
+        </p>
+        <p>
+          The project also gave me practice translating technical information for
+          a general audience. Terms such as sensitivity, specificity, and
+          per-token pricing are useful to specialists but can be confusing to
+          everyone else. Learning how to explain those ideas without
+          oversimplifying them is something I can apply well beyond this
+          particular newsletter.
+        </p>
+
+        <h2>Key Learnings</h2>
+        <p>
+          The biggest lesson I took from this project was to be more skeptical of
+          favorable numbers. Almost every product announcement came with an
+          impressive metric, but the context around the metric was often more
+          interesting.
+        </p>
+        <p>
+          Claire's higher sensitivity came with lower specificity. Michaels'
+          reported conversion results were based on users who voluntarily tried
+          the assistant, which makes the comparison less straightforward. And
+          reading the FDA information instead of relying only on the company's
+          announcement gave me a more complete picture of what Claire was actually
+          approved and intended to do.
+        </p>
+        <p>
+          I also came away with a stronger sense that AI capability is only one
+          part of the adoption decision. Across the examples I looked at, workflow
+          fit mattered just as much. Someone has to be able to use the system
+          effectively, catch mistakes when they matter, and remain accountable for
+          important decisions. A lower token price is useful, but it does not
+          automatically make a product more valuable.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+          <li>Anthropic. (2026, July 24). <em>Introducing Claude Opus 5</em>. https://www.anthropic.com/news/claude-opus-5</li>
+          <li>Google. (2026, August 13). <em>Introducing Gemini 3.7 Flash</em>. https://blog.google</li>
+          <li>Liu, I. (2026). Michaels sees initial success with Google-powered AI assistant. <em>Modern Retail</em>. https://www.modernretail.co</li>
+          <li>OpenAI. (2026, July 22). <em>Introducing OpenAI Presence</em>. https://openai.com/index/introducing-openai-presence/</li>
+          <li>Perimeter Medical Imaging AI, Inc. (2026, August 13). <em>Intermountain Health brings Perimeter's Claire to the operating room</em>. PR Newswire. https://www.prnewswire.com</li>
+          <li>The Michaels Companies, Inc. (2026, July 21). <em>Michaels unveils "Ask Mike" AI assistant</em>. PR Newswire. https://www.prnewswire.com</li>
+          <li>U.S. Food and Drug Administration. (2026, March 3). <em>Claire OCT System (P250008)</em>. https://www.accessdata.fda.gov</li>
+        </ul>
+        <p class="artifact__note">
+          Note. The newsletter page contains the complete APA reference list,
+          including image credits.
+        </p>
+
+        <div class="artifact__links">
+          <a class="btn btn--primary" href="commercial-ai-newsletter-issue.html">Read the newsletter →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Mengtian Zhou · <span id="year"></span></p>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>
